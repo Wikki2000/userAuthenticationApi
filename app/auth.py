@@ -61,7 +61,7 @@ def register():
 
     except IntegrityError:
         session = user.get_session()
-        session.roll_back()
+        session.rollback()
 
         return jsonify({
             "status": "Bad request",
